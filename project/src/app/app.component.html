@@ -1,0 +1,42 @@
+<div style="background-color: antiquewhite;display: flex; height: 750px; justify-content: center">
+  <div class="main-container">
+    <h1 style="color: white">Конвертация валюты</h1>
+    <div class="selection-cont">
+      <select #c1 name="" id="country1" (mouseleave)="changebase(c1.value)">
+        <option value="USD">Доллар(США)</option>
+        <option value="RUB">Рубль (Россия)</option>
+        <option value="EUR">Евро</option>
+        <option value="AUD">Доллар (Австралия)</option>
+        <option value="CNY">Китайский юань</option>
+        <option value="MVR">Мальдивская руфия</option>
+        <option value="THB">Таиландский бат</option>
+        <option value="TRY">Турецкая лира</option>
+      </select>
+      <p><=></p>
+      <select #c2 name="" id="country2" (mouseleave)="tocountry(c2.value)">
+        <option value="RUB">Рубль Россия</option>
+        <option value="USD">Доллар(США)</option>
+        <option value="EUR">Евро</option>
+        <option value="AUD">Доллар (Австралия)</option>
+        <option value="CNY">Китайский юань</option>
+        <option value="MVR">Мальдивская руфия</option>
+        <option value="THB">Таиландский бат</option>
+        <option value="TRY">Турецкая лира</option>
+      </select>
+    </div>
+    <div class="selection-cont">
+
+    </div>
+
+
+
+    <div class="result-container">
+      <p><input type="number" [(ngModel)]="inputNumber">{{base}}</p>
+      <p>=</p>
+      <p>{{result}} {{cont2}}</p>
+    </div>
+
+    <button (click)="convert()">Перевести</button>
+  </div>
+
+</div>
