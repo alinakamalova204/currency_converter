@@ -14,6 +14,7 @@ export class AppComponent {
   cont2 = 'RUB';
   result: number = 1;
   inputNumber: number = 1;
+  final: string = '';
 
   @ViewChild('c1') country1: ElementRef | undefined;
   @ViewChild('c2') country2: ElementRef | undefined;
@@ -57,6 +58,7 @@ export class AppComponent {
         this.result = this.currjson.conversion_rates.TRY;
       }
       this.result = this.inputNumber * this.result;
+      this.final = this.result + this.cont2
 
     });
 
